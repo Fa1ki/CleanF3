@@ -174,6 +174,14 @@ public class CleanDebug implements ClientModInitializer {
             }
         }
 
+        if (CleanDebugConfig.hideVoxy) {
+            var voxyIndex = indexOfStartingWith(text, "Voxy Core");
+
+            if (voxyIndex != -1) {
+                text.subList(voxyIndex, Math.min(voxyIndex + 10, text.size())).clear();
+            }
+        }
+
         if (CleanDebugConfig.hideCoordinates) {
             text.removeIf(s -> s.startsWith(Formatting.UNDERLINE + "Targeted Block: "));
         }

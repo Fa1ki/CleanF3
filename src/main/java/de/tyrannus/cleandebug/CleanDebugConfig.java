@@ -78,4 +78,7 @@ public class CleanDebugConfig extends MidnightConfig {
     
     @Entry
     public static boolean hideBadOptimizations = true;
+    
+    @Entry
+    public static boolean hideVoxy = true;
 }
